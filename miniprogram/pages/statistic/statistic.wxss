@@ -1,0 +1,147 @@
+/* pages/statistic/statistic.wxss */
+
+page {
+  background-color: rgb(255, 255, 255);
+}
+
+.Statistic_Allpage{
+  display:flex;
+  flex-direction: column;
+  margin-left:5%;
+  margin-right:5%;
+}
+
+.Personal_Statistic{
+  background-color:rgb(7, 8, 41);
+  height:var(--card_height--);
+  display:flex;
+  flex-direction: column;
+
+  border-radius:20rpx;
+}
+
+.Personal_Title{
+  color: white;
+  font-family: YouYuan;
+  font-weight: 700;
+  margin-top: 6%;
+  margin-left: 8%;
+}
+
+.chart{
+  margin-top:6%;
+  position: relative;
+}
+
+.horizontal{
+  display:flex;
+  flex-direction: column;
+  position:absolute;
+}
+
+.horizontal_number_block{
+  display:flex;
+  flex-direction: column;
+  position:absolute;
+}
+
+.horizontal_number{
+  color: white;
+  font-family: YouYuan;
+  font-size:10px;
+  padding-left:15px;
+  margin-left: auto;
+}
+
+.horizontal_line{
+  display:flex;
+  flex-direction: row;
+}
+
+.horizontal_line_head{
+  background-color:rgb(255, 255, 255,0.7);
+  height:1px;
+  margin-left:30px;
+  margin-top:5px;
+}
+
+.horizontal_line_tail_transparent{
+  background-color:rgb(255, 255, 255,0.1);
+  height:1px;
+  margin-top:5px;
+}
+
+.horizontal_line_tail_solid{
+  background-color:rgb(255, 255, 255,0.7);
+  height:1px;
+  margin-top:5px;
+}
+
+.vertical{
+  display:flex;
+  flex-direction: row;
+  position:absolute;
+}
+
+.vertical_line_head_solid{
+  background-color:rgb(255, 255, 255,0.7);
+  width:1px;
+  margin-top:5px;
+}
+
+.vertical_line_head_transparent{
+  background-color:rgb(255, 255, 255,0);
+  width:1px;
+  margin-top:5px;
+}
+
+.vertical_line_tail{
+  background-color:rgb(255, 255, 255,0.7);
+  width:1px;
+}
+
+.vertical_number{
+  color: white;
+  font-family: YouYuan;
+  font-size:10px;
+  text-align: center;
+}
+
+.vertical_number_block{
+  display:flex;
+  flex-direction:row;
+  position:absolute;
+}
+
+.vertical_result{
+  display:flex;
+  flex-direction: row;
+  position:absolute;
+}
+
+.vertical_result_pillar{
+  margin:0 5px 0 5px;
+  background-color: aqua;
+}
+
+.vertical_result_unit{
+  display:flex;
+  flex-direction: column;
+}
+
+.Overall_Statistic{
+  background-color:rgb(41, 4, 38);
+  height:var(--card_height--);
+  display:flex;
+  flex-direction: column;
+
+  border-radius:20rpx;
+}
+
+.Overall_Title{
+  color: white;
+  font-family: YouYuan;
+  font-weight: 700;
+  margin-top: 6%;
+  margin-left: 8%;
+}

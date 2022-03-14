@@ -1,0 +1,25 @@
+/**index.wxss**/
+
+.toss1{
+  width:30%;
+  top:70px;
+  left:42px;
+  position: absolute;
+}
+
+.toss2{
+  width:30%;
+  top:70px;
+  right:42px;
+  position: absolute;
+}
+
+.number{
+  color:white;
+  font-size: 50px;
+  text-align: center;
+}
+
+.bt{
+  top:60px;
+}

@@ -1,0 +1,229 @@
+<!--pages/statistic/statistic.wxml-->
+<view class="Statistic_Allpage" style="margin-top:{{Page_Height*6/100}}px">
+  <view class="Personal_Statistic" style="--card_height--: {{Page_Height*41/100}}px">
+    <text class="Personal_Title">个人数据统计</text>
+    <view class="chart">
+      <view class="horizontal">
+
+        
+        <view class="horizontal_number_block">
+          <text class="horizontal_number">{{maxn}}</text>
+          <text class="horizontal_number" style="margin-top:{{Page_Height*3/80}}px">{{maxn*3/4}}</text>
+          <text class="horizontal_number" style="margin-top:{{Page_Height*3/80}}px">{{maxn*2/4}}</text>
+          <text class="horizontal_number" style="margin-top:{{Page_Height*3/80}}px">{{maxn*1/4}}</text>
+          <text class="horizontal_number" style="margin-top:{{Page_Height*3/80}}px">0</text>
+        </view>
+
+
+        <view class="horizontal_line">
+          <view class="horizontal_line_head" style="width:5px"></view>
+          <view class="horizontal_line_tail_transparent" style="width:{{Page_Width*3/4}}px"></view>
+        </view>
+        <view class="horizontal_line" style="margin-top:{{Page_Height*3/80+5}}px">
+          <view class="horizontal_line_head" style="width:5px"></view>
+          <view class="horizontal_line_tail_transparent" style="width:{{Page_Width*3/4}}px"></view>
+        </view>
+        <view class="horizontal_line" style="margin-top:{{Page_Height*3/80+5}}px">
+          <view class="horizontal_line_head" style="width:5px"></view>
+          <view class="horizontal_line_tail_transparent" style="width:{{Page_Width*3/4}}px"></view>
+        </view>
+        <view class="horizontal_line" style="margin-top:{{Page_Height*3/80+5}}px">
+          <view class="horizontal_line_head" style="width:5px"></view>
+          <view class="horizontal_line_tail_transparent" style="width:{{Page_Width*3/4}}px"></view>
+        </view>
+        <view class="horizontal_line" style="margin-top:{{Page_Height*3/80+5}}px">
+          <view class="horizontal_line_head" style="width:5px"></view>
+          <view class="horizontal_line_tail_solid" style="width:{{Page_Width*3/4}}px"></view>
+        </view>
+        
+
+      </view>
+
+      <view class="vertical">
+        <view class="vertical_line" style="margin-left:34px">
+          <view class="vertical_line_head_solid" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+      </view>
+
+      <view class="vertical_result" style="height:{{Page_Height*3/20+50}}px">
+        <view style="margin-left:34px"></view>
+        <view class="vertical_result_unit" style="width:{{Page_Width*3/44}}px">
+          <view class="vertical_result_blank" style="height:{{Page_Height*3/20+50-users[2]}}px"></view>
+          <view class="vertical_result_pillar" style="height:{{users[2]}}px"></view>
+        </view>
+      </view>
+
+      <view class="vertical_number_block" style="margin-top:{{Page_Height*3/20+50}}px">
+        <text style="margin-left:35px"></text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">2</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">3</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">4</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">5</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">6</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">7</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">8</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">9</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">10</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">11</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">12</text>
+      </view>
+
+    </view>
+  </view>
+
+
+
+  <view style="margin-top:{{Page_Height*6/100}}px"></view>
+
+
+
+  <view class="Overall_Statistic"  style="--card_height--: {{Page_Height*41/100}}px">
+    <text class="Overall_Title" >总体数据统计</text>
+    <view class="chart">
+      <view class="horizontal">
+
+        <view class="horizontal_number_block">
+          <text class="horizontal_number">{{maxn}}</text>
+          <text class="horizontal_number" style="margin-top:{{Page_Height*3/80}}px">{{maxn*3/4}}</text>
+          <text class="horizontal_number" style="margin-top:{{Page_Height*3/80}}px">{{maxn*2/4}}</text>
+          <text class="horizontal_number" style="margin-top:{{Page_Height*3/80}}px">{{maxn*1/4}}</text>
+          <text class="horizontal_number" style="margin-top:{{Page_Height*3/80}}px">0</text>
+        </view>
+
+        <view class="horizontal_line">
+          <view class="horizontal_line_head" style="width:5px"></view>
+          <view class="horizontal_line_tail_transparent" style="width:{{Page_Width*3/4}}px"></view>
+        </view>
+        <view class="horizontal_line" style="margin-top:{{Page_Height*3/80+5}}px">
+          <view class="horizontal_line_head" style="width:5px"></view>
+          <view class="horizontal_line_tail_transparent" style="width:{{Page_Width*3/4}}px"></view>
+        </view>
+        <view class="horizontal_line" style="margin-top:{{Page_Height*3/80+5}}px">
+          <view class="horizontal_line_head" style="width:5px"></view>
+          <view class="horizontal_line_tail_transparent" style="width:{{Page_Width*3/4}}px"></view>
+        </view>
+        <view class="horizontal_line" style="margin-top:{{Page_Height*3/80+5}}px">
+          <view class="horizontal_line_head" style="width:5px"></view>
+          <view class="horizontal_line_tail_transparent" style="width:{{Page_Width*3/4}}px"></view>
+        </view>
+        <view class="horizontal_line" style="margin-top:{{Page_Height*3/80+5}}px">
+          <view class="horizontal_line_head" style="width:5px"></view>
+          <view class="horizontal_line_tail_solid" style="width:{{Page_Width*3/4}}px"></view>
+        </view>
+        
+      </view>
+
+      <view class="vertical">
+        <view class="vertical_line" style="margin-left:34px">
+          <view class="vertical_line_head_solid" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+        <view class="vertical_line" style="margin-left:{{(Page_Width*3/4-11)/11}}px">
+          <view class="vertical_line_head_transparent" style="height:{{Page_Height*3/20+45}}px"></view>
+          <view class="vertical_line_tail" style="height:5px"></view>
+        </view>
+      </view>
+      
+      <view class="vertical_number_block" style="margin-top:{{Page_Height*3/20+50}}px">
+        <text style="margin-left:35px"></text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">2</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">3</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">4</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">5</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">6</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">7</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">8</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">9</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">10</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">11</text>
+        <text class="vertical_number" style="width:{{Page_Width*3/44}}px">12</text>
+      </view>
+
+    </view>
+  </view>
+</view>

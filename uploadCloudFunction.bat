@@ -1,0 +1,1 @@
+"E:\微信开发者工具\微信web开发者工具\cli.bat" cloud functions deploy --e catan-7gksvqvi6fc995ac --n quickstartFunctions --r --project "D:\WeChatProjects\CatanToss" --report_first --report

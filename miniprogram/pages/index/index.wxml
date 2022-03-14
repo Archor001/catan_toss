@@ -1,0 +1,8 @@
+<!--index.wxml-->
+
+<view class="container">
+  <image src="{{'../../img/toss/'+num1+'.png'}}" class="toss1" mode="widthFix"></image>
+  <image src="{{'../../img/toss/'+num2+'.png'}}" class="toss2" mode="widthFix"></image>
+</view>
+<view class="number">{{sum}}</view>
+<button bindtap="onButtonTap" class="bt">扔!</button>

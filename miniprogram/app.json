@@ -1,0 +1,34 @@
+{
+  "cloud":true,
+  "pages":[
+    "pages/index/index",
+    "pages/statistic/statistic"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "扔色子",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color": "#bfbfbf",  
+    "borderStyle": "black" ,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "icon/toss.png",
+        "selectedIconPath": "icon/selected_toss.png",
+        "text": "扔色子"
+      },
+      {
+        "pagePath": "pages/statistic/statistic",
+        "iconPath": "icon/statistic.png",
+        "selectedIconPath": "icon/selected_statistic.png",
+        "text": "统计"
+        
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
