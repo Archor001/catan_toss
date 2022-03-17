@@ -5,8 +5,8 @@ cloud.init()
 // 云函数入口函数
 const db = cloud.database()
 exports.main = async (event, context) => {
-  const wxContext = cloud.getWXContext()
-  return await db.collection('result_8').where({
-    test:'1'
-  }).count()
+  let res = await db.collection(event.tableid).count()
+  return {
+    total: res.total
+  }
 }

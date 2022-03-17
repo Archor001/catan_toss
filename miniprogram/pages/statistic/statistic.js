@@ -19,10 +19,11 @@ Page({
     Page_Height:0,
     Page_Width:0,
 
-    maxn:20, //y轴坐标最大值
+    max_user:0, //y轴坐标最大值
+    max_group:0,
 
-    users:[0,0,0,0,0,0,0,0,0,0,0,0,0],
-    faction:0
+    users:[0,0,0,0,0,0,0,0,0,0,0],
+    group:[0,0,0,0,0,0,0,0,0,0,0],
 
   },
 
@@ -61,6 +62,52 @@ Page({
     }
     return tableId;
   },
+
+  getResult:function(){
+    //个人
+    let that=this;
+
+    let ps = []
+    for(let i=2;i<=12;i++) {
+      var tableid=that.getTable(i);
+      ps.push(db.collection(tableid).count())
+
+    }
+    Promise.all(ps).then(res=>{
+      let maxv = Math.max(...res.map(v=>v.total))
+      maxv=Math.ceil(maxv/4)*4;
+      that.setData({
+        max_user: maxv,
+        users: res.map(v=>v.total*(that.data.Page_Height*3/20+45)/maxv),
+        
+      })
+      //console.log(that.data.users)
+    })
+
+    //总体
+    ps= []
+    for(let i=2;i<=12;i++){
+      let tableid=that.getTable(i);
+      ps.push(wx.cloud.callFunction({
+        name:'userCount',
+        data:{
+          tableid: tableid,
+        }
+        })
+      )
+    }
+    Promise.all(ps).then(res=>{
+      let maxv = Math.max(...res.map(v=>v.result.total))
+      maxv=Math.ceil(maxv/4)*4;
+      that.setData({
+        max_group: maxv,
+        group: res.map(v=>v.result.total*(that.data.Page_Height*3/20+45)/maxv),
+        
+      })
+      //console.log(that.data.group)
+    })
+
+  },
   
   onLoad: function (options) {
 
@@ -90,37 +137,20 @@ Page({
   },
 
   getGroupResult: function(i){
-    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.getResult()
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let that=this;
-    function getUserResult(i){
-      if(i==13) return ;
-      var tableid=that.getTable(i);
-      db.collection(tableid).count({
-        success(res){
-          console.log(res)
-          getUserResult(i+1)
-          that.setData({
-            ["users["+i+"]"]: res.total,
-          })
-        }
-      })
-    }
-    getUserResult(2)
-    console.log(this.data.users)
-    //总体
-    this.getGroupResult();
+    
   },
 
   /**
